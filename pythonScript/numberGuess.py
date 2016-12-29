@@ -1,6 +1,6 @@
 #!usr/bin/env python
 """
-numberGuess, by AffanIndo, 7-11-16.
+numberGuess.py
 Guess the number.
 """
 

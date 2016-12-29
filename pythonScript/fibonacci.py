@@ -1,3 +1,10 @@
+#!usr/bin/env python
+"""
+fibonacci.py
+usage: >>> python fibonacci.py <number>
+This program tells yopu the nth fibonacci number
+"""
+
 import argparse
 
 def fib(n):
