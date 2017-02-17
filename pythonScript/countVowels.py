@@ -3,6 +3,7 @@
 countVowels.py
 Insert an input then count the vowels, then report how many of each vowels
 """
+
 A = 0
 I = 0
 U = 0
