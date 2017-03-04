@@ -1,7 +1,7 @@
 #!usr/bin/env python
 """
 numberGuess.py
-Guess the number.
+Guess the number
 """
 
 import random

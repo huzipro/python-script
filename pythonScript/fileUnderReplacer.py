@@ -1,10 +1,3 @@
-
-"""
-fileUnderReplacer.py
-Mass replace "_" (underscores) to " " (spacebar) from file name in whole folder
-file_1, file_2 => file 1, file 2
-"""
-
 import os
 import glob
 files = glob.glob('*_*')
