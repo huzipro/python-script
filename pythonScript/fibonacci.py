@@ -2,7 +2,7 @@
 """
 fibonacci.py
 usage: >>> python fibonacci.py <number>
-This program tells yopu the nth fibonacci number
+This program tells you the nth fibonacci number
 """
 
 import argparse
