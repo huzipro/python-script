@@ -5,7 +5,7 @@ This is my programming practice repository
 I am an aspired science student that want to study in computer science. Meanwhile in my school they didn't teach me anything. So on this repository I put all of my code here.
 
 ##Content
-* (pythonScript) [https://github.com/AffanIndo/programming-practice/tree/master/pythonScript] contains my python script.
+* [pythonScript]([https://github.com/AffanIndo/programming-practice/tree/master/pythonScript) contains my python script.
 
 ##To-Do
 * pascalScript
