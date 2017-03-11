@@ -6,6 +6,6 @@ Checks if the string entered by the user is a palindrome. That is that it reads 
 
 string = input("Insert a string: ")
 if string[::-1] == string:
-	print("It is a palindrome")
+  print("It is a palindrome")
 else:
-	print("It is NOT a palindrome")
+  print("It is NOT a palindrome")
