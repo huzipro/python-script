@@ -1,4 +1,4 @@
-#!usr/bin/env python
+
 """
 namer.py
 Select the option and let the program rename the files according to the option selected. The idea of this program is to compile all of the common repetitive task of renaming files. For example if the option for remove underscore (_) is 1 and the option to remove bracket is 2, you can use 2 command at once by typing "12".
