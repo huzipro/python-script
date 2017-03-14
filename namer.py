@@ -5,9 +5,14 @@ Select the option and let the program rename the files according to the option s
 
 Style Guide:
   var = using_underscore
-  funct = camelCase
+  func = camelCase
   comment = all lowercase
   multi-comment = Uppercase and lowercase
+
+How to Add:
+  add def
+  update program user interface
+  update parser
 """
 import os
 import glob
@@ -21,14 +26,26 @@ def bracket():
     new_name2 = new_name.replace(")", "")
     print(new_name2)
     os.rename(file, new_name2)
-    print("Bracket")
 
 def underscore():
   files = glob.glob('*_*')
   for file in files:
     new_name = file.replace("_", " ")
     os.rename(file, new_name)
-    print("Underscore")
+
+def hd():
+  files = glob.glob('*_HD*')
+  for file in files:
+    new_name = file.replace("_HD", "")
+    os.rename(file, new_name)
+
+def replace():
+  search = input("Search: ")
+  replace = input("Replace: ")
+  files = glob.glob('*' + search + '*')
+  for file in files:
+    new_name = file.replace(search, replace)
+    os.rename(file, new_name)
 
 # main program
 def main():
@@ -36,6 +53,8 @@ def main():
   print("""
     1. Bracket Remover
     2. Underscore Remover
+    3. Tubemate's _HD Remover
+    4. Search and Replace
   """)
 
   # option parser
@@ -48,6 +67,12 @@ def main():
       print("Command " + options + " success!")
     elif options == "2":
       underscore()
+      print("Command " + options + " success!")
+    elif options == "3":
+      hd()
+      print("Command " + options + " success!")
+    elif options == "4":
+      replace()
       print("Command " + options + " success!")
     else:
       print("Command " + options + " not found!")
