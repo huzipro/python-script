@@ -17,6 +17,7 @@ How to Add:
   update program user interface
   update parser
 """
+
 import os
 import glob
 
@@ -50,22 +51,45 @@ def replace():
     new_name = file.replace(search, replace)
     os.rename(file, new_name)
 
-# main program
+def random():
+  import random
+  digit = int(input("How many digit?: "))
+  files = glob.glob('*.png') + glob.glob('*.jpg') + glob.glob('*.jpeg')
+  for file in files:
+    #number creator
+    newNameList = []
+    nameList = [] #name for all files
+    tempName = []
+    ext = file.split('.')[1]
+    for i in range(digit):
+      randomNumber = str(random.randint(1, 9))
+      tempName.append(randomNumber)
+    nameList.append(''.join(tempName)) #joining all the number
+    for name in nameList:
+      newNameList.append(name + "." + ext) #adding file format into newNameList
+    for name in newNameList:
+      os.rename(file, name)
+
+
+
+
+#main program
 def main():
-  # program user interface
+  #program user interface
   print("""
-    1. Bracket Remover
-    2. Underscore Remover
-    3. Tubemate's _HD Remover
-    4. Search and Replace
+    1. Bracket remover
+    2. Underscore remover
+    3. Tubemate's _HD remover
+    4. Search and replace
+    5. File name randomizer
   """)
 
-  # option parser
+  #option parser
   select = input("Option: ")
   for item in select:
     option.append(item) #pushing the option into the list
   for options in option: #executing each option in the list
-    if options == "1": # calling the function name
+    if options == "1": #calling the function name
       bracket()
       print("Command " + options + " success!")
     elif options == "2":
@@ -76,6 +100,9 @@ def main():
       print("Command " + options + " success!")
     elif options == "4":
       replace()
+      print("Command " + options + " success!")
+    elif options == "5":
+      random()
       print("Command " + options + " success!")
     else:
       print("Command " + options + " not found!")
