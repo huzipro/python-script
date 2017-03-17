@@ -57,17 +57,17 @@ def random():
   files = glob.glob('*.png') + glob.glob('*.jpg') + glob.glob('*.jpeg')
   for file in files:
     #number creator
-    newNameList = []
-    nameList = [] #name for all files
-    tempName = []
+    new_name_list = []
+    name_list = [] #name for all files
+    temp_name = []
     ext = file.split('.')[1]
     for i in range(digit):
       randomNumber = str(random.randint(1, 9))
-      tempName.append(randomNumber)
-    nameList.append(''.join(tempName)) #joining all the number
-    for name in nameList:
-      newNameList.append(name + "." + ext) #adding file format into newNameList
-    for name in newNameList:
+      temp_name.append(randomNumber)
+    name_list.append(''.join(temp_name)) #joining all the number
+    for name in name_list:
+      new_name_list.append(name + "." + ext) #adding file format into new_name_list
+    for name in new_name_list:
       os.rename(file, name)
 
 
