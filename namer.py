@@ -70,9 +70,6 @@ def random():
     for name in new_name_list:
       os.rename(file, name)
 
-
-
-
 #main program
 def main():
   #program user interface
