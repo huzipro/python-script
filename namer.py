@@ -70,6 +70,13 @@ def random():
     for name in new_name_list:
       os.rename(file, name)
 
+def prefix():
+  prefix = input("Prefix: ")
+  files = glob.glob('*.*')
+  for file in files:
+    # os.rename(file, prefix+file)
+    print(file)
+
 #main program
 def main():
   #program user interface
@@ -79,6 +86,7 @@ def main():
     3. Tubemate's _HD remover
     4. Search and replace
     5. File name randomizer
+    6. Prefix
   """)
 
   #option parser
@@ -100,6 +108,9 @@ def main():
       print("Command " + options + " success!")
     elif options == "5":
       random()
+      print("Command " + options + " success!")
+    elif options == "6":
+      prefix()
       print("Command " + options + " success!")
     else:
       print("Command " + options + " not found!")
