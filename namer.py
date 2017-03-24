@@ -24,7 +24,7 @@ import glob
 option = []
 
 def bracket():
-  files = glob.glob('*(*).txt')
+  files = glob.glob('*(*).*')
   for file in files:
     new_name = file.replace("(", "")
     new_name2 = new_name.replace(")", "")
