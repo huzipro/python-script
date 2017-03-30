@@ -54,7 +54,7 @@ def replace():
 def random():
   import random
   digit = int(input("How many digit?: "))
-  files = glob.glob('*.png') + glob.glob('*.jpg') + glob.glob('*.jpeg')
+  files = glob.glob('*.*')
   for file in files:
     # number creator
     new_name_list = []
@@ -75,6 +75,13 @@ def prefix():
   files = glob.glob('*.*')
   for file in files:
     os.rename(file, prefix+file)
+    print(file)
+
+def suffix():
+  suffix = input("Suffix: ")
+  files = glob.glob('*.*')
+  for file in files:
+    os.rename(file, file+suffix)
     print(file)
 
 # the problem with prefix() is that it will add prefix to ALL files. with number() it will add prefix to matching filename
