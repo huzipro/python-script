@@ -56,17 +56,17 @@ def random():
   digit = int(input("How many digit?: "))
   files = glob.glob('*.png') + glob.glob('*.jpg') + glob.glob('*.jpeg')
   for file in files:
-    #number creator
+    # number creator
     new_name_list = []
-    name_list = [] #name for all files
+    name_list = [] # name for all files
     temp_name = []
     ext = file.split('.')[1]
     for i in range(digit):
       randomNumber = str(random.randint(1, 9))
       temp_name.append(randomNumber)
-    name_list.append(''.join(temp_name)) #joining all the number
+    name_list.append(''.join(temp_name)) # joining all the number
     for name in name_list:
-      new_name_list.append(name + "." + ext) #adding file format into new_name_list
+      new_name_list.append(name + "." + ext) # adding file format into new_name_list
     for name in new_name_list:
       os.rename(file, name)
 
@@ -74,12 +74,20 @@ def prefix():
   prefix = input("Prefix: ")
   files = glob.glob('*.*')
   for file in files:
-    # os.rename(file, prefix+file)
+    os.rename(file, prefix+file)
     print(file)
 
-#main program
+# the problem with prefix() is that it will add prefix to ALL files. with number() it will add prefix to matching filename
+def number(): # add zero prefix => if desired digit is n, search file with n-1 digit then add 1 zero prefix so desired digit achieved
+  digit = int(input("Desired digit?: "))
+  files = glob.glob('[0-9]' * (digit - 1) + '.*') # search file with n-1 digit
+  for file in files:
+    os.rename(file, "0"+file) # add 1 zero prefix
+
+
+# main program
 def main():
-  #program user interface
+  # program user interface
   print("""
     1. Bracket remover
     2. Underscore remover
@@ -87,14 +95,16 @@ def main():
     4. Search and replace
     5. File name randomizer
     6. Prefix
+    7. Suffix
+    8. Number Namer
   """)
 
-  #option parser
+  # option parser
   select = input("Option: ")
   for item in select:
-    option.append(item) #pushing the option into the list
-  for options in option: #executing each option in the list
-    if options == "1": #calling the function name
+    option.append(item) # pushing the option into the list
+  for options in option: # executing each option in the list
+    if options == "1": # calling the function name
       bracket()
       print("Command " + options + " success!")
     elif options == "2":
@@ -111,6 +121,9 @@ def main():
       print("Command " + options + " success!")
     elif options == "6":
       prefix()
+      print("Command " + options + " success!")
+    elif options == "8":
+      number()
       print("Command " + options + " success!")
     else:
       print("Command " + options + " not found!")
