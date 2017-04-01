@@ -6,12 +6,6 @@ The idea of this program is to compile all of the common repetitive task of rena
 For example, if the option for remove underscore (_) is 1 and the option to remove bracket is 2,
 you can use 2 command at once by typing "12".
 
-Style Guide:
-  var = using_underscore 
-  func = camelCase
-  comment = all lowercase
-  multi-comment = Uppercase and lowercase
-
 How to Add:
   add def
   update program user interface
