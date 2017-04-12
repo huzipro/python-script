@@ -1,17 +1,8 @@
 # Cached File #
-__init__.pyc
-views.pyc
-test.pyc
-models.pyc
-apps.pyc
-admin.pyc
-forms.pyc
-urls.pyc
+__pycahce__/
 
 # OS Compiled #
 .DS_Store
 .DS_Store?
 Thumbs.db
 
-# Ignored Directory
-maid_files/backup/
