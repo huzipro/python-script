@@ -1,6 +1,7 @@
 # Folders #
 __pycahce__/
 ENV/
+backupFiles/
 
 # OS Compiled #
 .DS_Store
