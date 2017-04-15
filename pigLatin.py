@@ -6,10 +6,10 @@ Pig Latin is a game of alterations played on the English language game. To creat
 
 print("Pig Latin translator. Insert the text you want to translate into Pig Latin. To quit, type 'quit'")
 while True:
-  word = input("Insert text: ")
-  if word == "":
-    print("the text is empty")
-  elif word == "quit":
-    exit()
-  else:
-    print(word[1:]+"-"+word[0]+"ay")
+    word = input("Insert text: ")
+    if word == "":
+        print("the text is empty")
+    elif word == "quit":
+        exit()
+    else:
+        print(word[1:]+"-"+word[0]+"ay")

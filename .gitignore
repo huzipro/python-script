@@ -1,5 +1,6 @@
-# Cached File #
+# Folders #
 __pycahce__/
+ENV/
 
 # OS Compiled #
 .DS_Store

@@ -6,21 +6,21 @@ Credit to: I82Much - http://stackoverflow.com/questions/8886947/caesar-cipher-fu
 """
 
 def caesar(plainText, shift): 
-  cipherText = ""
-  for ch in plainText:
-    if ch.isalpha():
-      stayInAlphabet = ord(ch) + shift 
-      if stayInAlphabet > ord('z'):
-        stayInAlphabet -= 26
-      finalLetter = chr(stayInAlphabet)
-      cipherText += finalLetter
-  print("Your ciphertext is: ", cipherText)
-  return cipherText
+    cipherText = ""
+    for ch in plainText:
+        if ch.isalpha():
+            stayInAlphabet = ord(ch) + shift 
+            if stayInAlphabet > ord('z'):
+                stayInAlphabet -= 26
+            finalLetter = chr(stayInAlphabet)
+            cipherText += finalLetter
+    print("Your ciphertext is: ", cipherText)
+    return cipherText
 
 def Main():
-  plainText = input("Insert your text:\n")
-  shift = int(input("Insert how many shift:"))
-  caesar(plainText, shift)
+    plainText = input("Insert your text:\n")
+    shift = int(input("Insert how many shift:"))
+    caesar(plainText, shift)
 
 if __name__ == '__main__':
-  Main()
+    Main()
