@@ -15,6 +15,7 @@ dotFiles = ['C:\\Users\\AFFAN\\.bash_history',
             'C:\\Users\\AFFAN\\.minttyrc',
             'C:\\Users\\AFFAN\\.vimrc',]
 
+# Important files in D:\E-BOOK\Text\
 textFiles = ['D:\\E-BOOK\\Text\\000webhost.jpg',
              'D:\\E-BOOK\\Text\\000webhost.txt',
              'D:\\E-BOOK\\Text\\Ammar Advice.txt',
