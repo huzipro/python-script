@@ -41,6 +41,7 @@ if os.getcwd() != 'D:\\PROGRAMMING\\git\\python-script':
     print('EX')
     time.sleep(0.5)
     print('  PLOOOSION!!!')
+    time.sleep(1)
     remove(argv[0])
 else:
     pass
