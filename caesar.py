@@ -17,10 +17,7 @@ def caesar(plainText, shift):
     print("Your ciphertext is: ", cipherText)
     return cipherText
 
-def Main():
+if __name__ == '__main__':
     plainText = input("Insert your text:\n")
     shift = int(input("Insert how many shift:"))
     caesar(plainText, shift)
-
-if __name__ == '__main__':
-    Main()

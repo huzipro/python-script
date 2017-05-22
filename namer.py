@@ -137,14 +137,14 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
 def main():
     # program user interface
     print("""
-        1. Bracket remover
-        2. Underscore remover
-        3. Tubemate's _HD remover
-        4. Search and replace
-        5. File name randomizer
-        6. Prefix
-        7. Suffix
-        8. Number Namer
+    1. Bracket remover
+    2. Underscore remover
+    3. Tubemate's _HD remover
+    4. Search and replace
+    5. File name randomizer
+    6. Prefix
+    7. Suffix
+    8. Number Namer
     """)
 
     # option parser
