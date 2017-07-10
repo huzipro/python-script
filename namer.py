@@ -18,7 +18,7 @@ def parentheses():
     example:
     file (1).txt => file 1.txt
     """
-    files = glob.glob('*(*).*')
+    files = glob.glob("*(*).*")
     for file in files:
         new_name = file.replace("(", "")
         new_name2 = new_name.replace(")", "")
@@ -31,7 +31,7 @@ def underscore():
     example:
     file_1.txt => file 1.txt
     """
-    files = glob.glob('*_*')
+    files = glob.glob("*_*")
     for file in files:
         new_name = file.replace("_", " ")
         os.rename(file, new_name)
@@ -42,7 +42,7 @@ def hd():
     example:
     video_HD.mp4 => video.mp4
     """
-    files = glob.glob('*_HD*')
+    files = glob.glob("*_HD*")
     for file in files:
         new_name = file.replace("_HD", "")
         os.rename(file, new_name)
@@ -63,7 +63,7 @@ def replace():
     """
     search = input("Search: ")
     replace = input("Replace: ")
-    files = glob.glob('*' + search + '*')
+    files = glob.glob("*" + search + "*")
     for file in files:
         new_name = file.replace(search, replace)
         os.rename(file, new_name)
@@ -81,23 +81,22 @@ def random():
             retry = 0
             digit = int(input("How many digit?: "))
 
-            files = glob.glob('*.*')
+            files = glob.glob("*.*")
             for file in files:
                 # number creator
                 new_name_list = []
                 name_list = [] # name for all files
                 temp_name = []
-                ext = file.split('.')[1]
+                ext = file.split(".")[1]
                 for i in range(digit):
                     randomNumber = str(random.randint(1, 9))
                     temp_name.append(randomNumber)
-                name_list.append(''.join(temp_name)) # joining all the number
+                name_list.append("".join(temp_name)) # joining all the number
                 for name in name_list:
                     new_name_list.append(name + "." + ext) # adding file format into new_name_list
                 for name in new_name_list:
                     os.rename(file, name)
             break
-        # handling the FileNameExist
         except FileExistsError:
             print("FileExistsError: Input the digit again or increase the digit.")
 
@@ -109,7 +108,7 @@ def prefix():
     file.txt => Asdfile.txt
     """
     prefix = input("Prefix: ")
-    files = glob.glob('*.*')
+    files = glob.glob("*.*")
     for file in files:
         os.rename(file, prefix+file)
         print(file)
@@ -122,7 +121,7 @@ def suffix():
     file.txt => fileAsd.txt
     """
     suffix = input("Suffix: ")
-    files = glob.glob('*.*')
+    files = glob.glob("*.*")
     for file in files:
         os.rename(file, file+suffix)
         print(file)
@@ -136,7 +135,7 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
     01.jpeg => 001.jpeg
     """
     digit = int(input("Desired digit?: "))
-    files = glob.glob('[0-9]' * (digit - 1) + '.*') # search file with n-1 digit
+    files = glob.glob("[0-9]" * (digit - 1) + ".*") # search file with n-1 digit
     for file in files:
         os.rename(file, "0"+file) # add 1 zero prefix
 
@@ -147,7 +146,7 @@ def main():
     print("""
     1. parentheses remover
     2. Underscore remover
-    3. Tubemate's _HD remover
+    3. Tubemate"s _HD remover
     4. Search and replace
     5. File name randomizer
     6. Prefix
@@ -187,5 +186,5 @@ def main():
         else:
             print("Command " + options + " not found!")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
