@@ -3,7 +3,7 @@
 namer.py
 Select the option and let the program rename the files according to the option selected.
 The idea of this program is to compile all of the common repetitive task of renaming files.
-For example, if the option for remove underscore is 1 and the option to remove bracket is 2,
+For example, if the option for remove underscore is 1 and the option to remove parentheses is 2,
 you can use 2 command at once by typing "12".
 """
 
@@ -12,9 +12,9 @@ import glob
 
 option = []
 
-def bracket():
+def parentheses():
     """
-    remove all bracket in file name
+    remove all parentheses in file name
     example:
     file (1).txt => file 1.txt
     """
@@ -29,7 +29,7 @@ def underscore():
     """
     remove all underscore in file name
     example:
-    - file_1.txt => file 1.txt
+    file_1.txt => file 1.txt
     """
     files = glob.glob('*_*')
     for file in files:
@@ -76,22 +76,30 @@ def random():
     file.txt => 78349.txt
     """
     import random
-    digit = int(input("How many digit?: "))
-    files = glob.glob('*.png') + glob.glob('*.jpg') + glob.glob('*.jpeg')
-    for file in files:
-        # number creator
-        new_name_list = []
-        name_list = [] # name for all files
-        temp_name = []
-        ext = file.split('.')[1]
-        for i in range(digit):
-            randomNumber = str(random.randint(1, 9))
-            temp_name.append(randomNumber)
-        name_list.append(''.join(temp_name)) # joining all the number
-        for name in name_list:
-            new_name_list.append(name + "." + ext) # adding file format into new_name_list
-        for name in new_name_list:
-            os.rename(file, name)
+    while True:
+        try:
+            retry = 0
+            digit = int(input("How many digit?: "))
+
+            files = glob.glob('*.*')
+            for file in files:
+                # number creator
+                new_name_list = []
+                name_list = [] # name for all files
+                temp_name = []
+                ext = file.split('.')[1]
+                for i in range(digit):
+                    randomNumber = str(random.randint(1, 9))
+                    temp_name.append(randomNumber)
+                name_list.append(''.join(temp_name)) # joining all the number
+                for name in name_list:
+                    new_name_list.append(name + "." + ext) # adding file format into new_name_list
+                for name in new_name_list:
+                    os.rename(file, name)
+            break
+        # handling the FileNameExist
+        except FileExistsError:
+            print("FileExistsError: Input the digit again or increase the digit.")
 
 def prefix():
     """
@@ -137,7 +145,7 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
 def main():
     # program user interface
     print("""
-    1. Bracket remover
+    1. parentheses remover
     2. Underscore remover
     3. Tubemate's _HD remover
     4. Search and replace
@@ -153,7 +161,7 @@ def main():
         option.append(item) # pushing the option into the list
     for options in option: # executing each option in the list
         if options == "1": # calling the function name
-            bracket()
+            parentheses()
             print("Command " + options + " success!")
         elif options == "2":
             underscore()
