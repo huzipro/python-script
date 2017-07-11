@@ -20,5 +20,6 @@ for file in dotFiles:
     # The folder is not relative path because I use this as an alias
     # shutil.copy2(file, "./backupFiles/dotFiles/")
     shutil.copy2(file, "D:\\PROGRAMMING\\git\\python-script\\backupFiles\\dotFiles")
+    print("copied: " + file)
 
 print("\n  Backup success! no error occured.")
