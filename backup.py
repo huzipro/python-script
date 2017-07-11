@@ -2,6 +2,7 @@
 """
 backup.py
 This is the script to backup my files to ./backupFiles/ directory. I already put the backup folder inside .gitignore so it will not uploaded to the repository. If the files already exists. It will replace the files so it will update the backup files.
+bashrc: alias backup="python /d/PROGRAMMING/git/python-script/backup.py"
 """
 
 import shutil
