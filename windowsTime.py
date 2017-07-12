@@ -1,7 +1,7 @@
 
 """
 windowsTime.py
-My computer's CMOS is busted so the time oftenly resetted. This program set it automatically by using UTC internet time. This program using "date" program on windows, "elevate" program on windows, bs4 and requests module.
+My computer's CMOS is busted so the time oftenly resetted. This program set it automatically by using UTC internet time. This program using "date" program on windows, "elevate" program on windows http://code.kliu.org/misc/elevate/, bs4 and requests module.
 bashrc: alias windowsTime="cd /d/PROGRAMMING/git/python-script/ && source /d/PROGRAMMING/git/python-script/my_env/Scripts/activate && python windowsTime.py"
 """
 
