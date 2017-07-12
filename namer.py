@@ -139,6 +139,25 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
     for file in files:
         os.rename(file, "0"+file) # add 1 zero prefix
 
+def text():
+    """
+    Rename files according to a txt file.
+    example:
+    >>> File: file.txt
+    Separate search and replace with |
+    file1.txt|data.txt
+    file2.txt|log.txt
+
+    file1.txt => data.txt
+    file2.txt => log.txt
+    """
+    text_file = input("File: ")
+    with open(text_file, "r") as f:
+        for line in f:
+            search = line.split("|")[0].replace("\n", "")
+            replace = line.split("|")[1].replace("\n", "")
+            os.rename(search, replace)
+            Change
 
 # main program
 def main():
@@ -152,6 +171,7 @@ def main():
     6. Prefix
     7. Suffix
     8. Number Namer
+    9. Renaming From A Text File
     """)
 
     # option parser
@@ -182,6 +202,9 @@ def main():
             print("Command " + options + " success!")
         elif options == "8":
             number()
+            print("Command " + options + " success!")
+        elif options == "9":
+            text()
             print("Command " + options + " success!")
         else:
             print("Command " + options + " not found!")
