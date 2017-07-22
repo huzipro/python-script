@@ -4,7 +4,7 @@ namer.py
 Select the option and let the program rename the files according to the option selected.
 The idea of this program is to compile all of the common repetitive task of renaming files.
 For example, if the option for remove underscore is 1 and the option to remove parentheses is 2,
-you can use 2 command at once by typing "12".
+you can use 2 command at once by typing "12" or 21.
 """
 
 import os
@@ -135,7 +135,7 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
     01.jpeg => 001.jpeg
     """
     digit = int(input("Desired digit?: "))
-    files = glob.glob("[0-9]" * (digit - 1) + ".*") # search file with n-1 digit
+    files = glob.glob("[0-9]" * (digit-1) + (".*"))
     for file in files:
         os.rename(file, "0"+file) # add 1 zero prefix
 
@@ -163,7 +163,7 @@ def text():
 def main():
     # program user interface
     print("""
-    1. parentheses remover
+    1. Parentheses remover
     2. Underscore remover
     3. Tubemate"s _HD remover
     4. Search and replace

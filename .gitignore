@@ -4,6 +4,9 @@ backupFiles/
 my_env/
 scrape/
 
+# Files #
+test.py
+
 # OS Compiled #
 .DS_Store
 .DS_Store?
