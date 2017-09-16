@@ -5,21 +5,18 @@ This is the script to backup my files to ./backupFiles/ directory. I already put
 bashrc: alias backup="python /d/PROGRAMMING/git/python-script/backup.py"
 """
 
-import shutil
+# import shutil
 
-# Important files in ~
-dotFiles = ["C:\\Users\\AFFAN\\.bash_history",
-            "C:\\Users\\AFFAN\\.bash_profile",
-            "C:\\Users\\AFFAN\\.bashrc",
-            "C:\\Users\\AFFAN\\.gitconfig",
-            "C:\\Users\\AFFAN\\.gitignore_global",
-            "C:\\Users\\AFFAN\\.minttyrc",
-            "C:\\Users\\AFFAN\\.vimrc",]
+# Important files in "C:\example\"
+# exampleFiles = ["C:\\example\\file1.txt",
+#                 "C:\\example\\file2.txt",]
 
-for file in dotFiles:
+
+
+# for file in exampleFiles:
     # The folder is not relative path because I use this as an alias
     # shutil.copy2(file, "./backupFiles/dotFiles/")
-    shutil.copy2(file, "D:\\PROGRAMMING\\git\\python-script\\backupFiles\\dotFiles")
-    print("copied: " + file)
+    # shutil.copy2(file, "D:\\PROGRAMMING\\git\\python-script\\backupFiles\\dotFiles")
+    # print("copied: " + file)
 
-print("\n  Backup success! no error occured.")
+# print("\n  Backup success! no error occured.")

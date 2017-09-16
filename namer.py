@@ -135,7 +135,7 @@ def number(): # add zero prefix => if desired digit is n, search file with n-1 d
     01.jpeg => 001.jpeg
     """
     digit = int(input("Desired digit?: "))
-    files = glob.glob("[0-9]" * (digit-1) + (".*"))
+    files = glob.glob("[0-9]" * (digit-1) + (".*")) # search file with n-1 digit
     for file in files:
         os.rename(file, "0"+file) # add 1 zero prefix
 
